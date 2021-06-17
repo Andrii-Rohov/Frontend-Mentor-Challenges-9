@@ -1,0 +1,224 @@
+$font: 'Josefin Sans', sans-serif;
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+html {
+    background: linear-gradient(135deg,  hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    font-family: $font;
+    font-size: 16px;
+    width: fit-content;
+  
+}
+#main-left {
+    max-width: 830px;
+    background-color: white;
+    background-image: url(../images/bg-pattern-desktop.svg);
+  
+}
+#main-img {
+    
+    height: 800px;   
+}
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 8% 26% 19% 19%;
+    #logo {
+        width: 160px;
+    }
+    #hero-mobile {
+        display: none;
+        visibility: hidden;
+    }
+    #main-head {
+        font-size: 58px;
+        line-height: 65px;
+        text-transform: uppercase;
+        letter-spacing: 23px;
+        margin-top: 140px;
+        margin-bottom: 40px;
+        font-weight: 600;
+        color: $Dark-Grayish-Red;
+        span {
+            font-weight: 300;
+            color: $Desaturated-Red;
+        }
+       
+    }
+    p {
+        margin: 0 0 40px 0;
+        font-size: 17px;
+        color: $Desaturated-Red;
+        line-height: 30px;
+    }
+    #form {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    #email {
+        width: 415px;
+        height: 55px;
+        border-radius: 30px;
+        border: solid 1px $Desaturated-Red;
+        color: $Desaturated-Red;
+        padding-left: 30px;
+        font-size: 17px;
+        font-family: inherit;
+        box-sizing: border-box;
+        &:hover {
+            border: solid 3px $Soft-Red;
+        }
+        &:focus {
+            outline: none;
+            border: solid 3px $Soft-Red;
+            
+        }
+    }
+    #submit-button {
+        border: none;
+        background: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        width: 100px;
+        height: 55px;
+        border-radius: 30px;
+        position: absolute;
+        left: 80%;
+        cursor: pointer;
+        &:hover {
+            background: none;
+            background-color: hsl(0, 80%, 86%);
+            box-shadow: 0px 10px 30px #ac6565a3;
+            
+        }
+        
+    }
+}
+
+
+    .attribution {
+        font-family: $font;
+        font-size: 20px;
+        text-align: center;
+        color: $Dark-Grayish-Red;
+        a {
+            text-decoration: none;
+            color: $Soft-Red;
+            &:hover {
+                color: hsl(0, 93%, 53%);
+                
+            }
+        }
+    }
+    
+
+    #error-message {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        transition: 0.3s linear;
+        p{
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        img {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: -39px;
+            left: 68%;
+        }
+    }
+    .show-hide {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* RESPONSIVE */
+@media (max-width: 1150px) {
+    
+    #main-head  {
+        font-size: 40px !important;
+        letter-spacing: 17px !important;
+    }
+    p {
+        font-size: 14px !important;
+    }
+   
+}
+
+@media (max-width: 968px) {
+    
+    #main {
+        flex-direction: column;
+    }
+    #main-img {
+        visibility: hidden;
+        display: none;
+    }
+    #logo {
+        margin-bottom: 30px;
+    }
+    #main-head {
+        margin-top: 65px !important;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    #hero-mobile {
+        display: block !important;
+        visibility: visible !important;
+    }
+    #main-wrapper {
+        margin: 8% 19% 0% 19%;
+    }
+    #email {
+        width: 458px !important;
+    }
+    
+}
+@media (max-width: 610px) {
+    
+#main-head  {
+    font-size: 20px !important;
+    letter-spacing: 5px !important;
+}
+p {
+    font-size: 10px !important;
+}
+#email {
+    width: 342px !important;
+    height: 45px !important;
+}
+#submit-button {
+    width: 70px !important;
+    height: 45px !important;
+}
+
+}
+
+@media (max-width: 442px) {
+    #main-head {
+        line-height: 25px !important;
+        margin-bottom: 25px !important;
+        padding: 0 30px 0 30px !important;
+    }
+    p {
+        font-weight: 300 !important;
+        line-height: 20px !important;
+        font-size: 12px !important;
+    }
+    #main-wrapper {
+        margin: 10% 14% 19% 14%;
+        
+    }
+}
